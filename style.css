@@ -43,13 +43,18 @@ header p {
   background: #ffdd57;
 }
 
-#board {
+/* FIXED BOARD */
+.board {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 8px;
+  grid-template-rows: auto repeat(5, 1fr);
+  gap: 10px;
   padding: 20px;
+  max-width: 1100px;
+  margin: auto;
 }
 
+/* CATEGORY HEADERS */
 .category {
   background: #1c2a52;
   padding: 15px;
@@ -57,16 +62,18 @@ header p {
   font-weight: bold;
   border-radius: 8px;
   border: 2px solid #f1c40f;
+  font-size: 1.1rem;
 }
 
+/* QUESTION CELLS */
 .cell {
   background: #132047;
-  padding: 20px;
+  padding: 25px;
   text-align: center;
   border-radius: 8px;
   border: 2px solid #2980b9;
   cursor: pointer;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #f1c40f;
   transition: 0.2s;
@@ -92,13 +99,14 @@ footer {
   margin-top: 15px;
 }
 
+/* MODAL */
 .modal {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0,0,0,0.85);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,9 +114,9 @@ footer {
 }
 
 .modal-content {
-  background: #ffffff;
-  color: #111;
-  width: 85%;
+  background: white;
+  color: black;
+  width: 90%;
   max-width: 750px;
   padding: 25px;
   border-radius: 12px;
@@ -161,10 +169,11 @@ footer {
   margin-top: 15px;
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
 
 .score-controls button {
-  width: 48%;
+  flex: 1;
   padding: 12px;
   border: none;
   border-radius: 8px;
@@ -172,20 +181,20 @@ footer {
   cursor: pointer;
 }
 
-#addScoreBtn {
+#markCorrectBtn {
   background: #2980b9;
   color: white;
 }
 
-#subtractScoreBtn {
+#markWrongBtn {
   background: #c0392b;
   color: white;
 }
 
-#addScoreBtn:hover {
+#markCorrectBtn:hover {
   background: #3498db;
 }
 
-#subtractScoreBtn:hover {
+#markWrongBtn:hover {
   background: #e74c3c;
 }
