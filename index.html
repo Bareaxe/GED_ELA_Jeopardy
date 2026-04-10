@@ -15,15 +15,16 @@
 
   <div class="controls">
     <button id="resetBtn">🔄 Reset Game</button>
-    <button id="showAllBtn">👁 Show All Answers</button>
-    <button id="hideAllBtn">🙈 Hide All Answers</button>
   </div>
 
-  <main id="board"></main>
+  <main>
+    <div id="board" class="board"></div>
+  </main>
 
   <div id="modal" class="modal hidden">
     <div class="modal-content">
       <span id="closeBtn" class="close">&times;</span>
+
       <h2 id="modalCategory"></h2>
       <h3 id="modalValue"></h3>
       <p id="modalQuestion"></p>
@@ -37,15 +38,14 @@
       </div>
 
       <div class="score-controls">
-        <button id="addScoreBtn">➕ Add Points</button>
-        <button id="subtractScoreBtn">➖ Subtract Points</button>
+        <button id="markCorrectBtn">✔ Mark Correct</button>
+        <button id="markWrongBtn">✘ Mark Wrong</button>
       </div>
     </div>
   </div>
 
   <footer>
     <p>GED ELA Jeopardy | Built for Canvas + GitHub Pages</p>
-    <p><strong>Tip:</strong> Click a point value to open the question.</p>
   </footer>
 
   <script src="questions.js"></script>
