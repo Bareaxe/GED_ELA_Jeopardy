@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GED ELA Jeopardy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>📚 GED ELA Jeopardy</h1>
+    <p>Practice GED Reading + Grammar + Writing Skills</p>
+  </header>
+
+  <div class="controls">
+    <button id="resetBtn">🔄 Reset Game</button>
+    <button id="showAllBtn">👁 Show All Answers</button>
+    <button id="hideAllBtn">🙈 Hide All Answers</button>
+  </div>
+
+  <main id="board"></main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="closeBtn" class="close">&times;</span>
+      <h2 id="modalCategory"></h2>
+      <h3 id="modalValue"></h3>
+      <p id="modalQuestion"></p>
+
+      <button id="revealBtn">✅ Reveal Answer</button>
+
+      <div id="answerBox" class="answer hidden">
+        <h3>Answer:</h3>
+        <p id="modalAnswer"></p>
+        <p id="modalExplanation" class="explanation"></p>
+      </div>
+
+      <div class="score-controls">
+        <button id="addScoreBtn">➕ Add Points</button>
+        <button id="subtractScoreBtn">➖ Subtract Points</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>GED ELA Jeopardy | Built for Canvas + GitHub Pages</p>
+    <p><strong>Tip:</strong> Click a point value to open the question.</p>
+  </footer>
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
